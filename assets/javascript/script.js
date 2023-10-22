@@ -19,10 +19,16 @@ const toggleBtn = $('.app-light-toggle__btn');
 const toggleBtn_icon = toggleBtn.querySelector('i');
 const toggleBtn_text = toggleBtn.querySelector('span');
 
+const appGame = $('.app-game');
+
 const root = document.documentElement;
 
 // app start
 function start(){
+
+    // -1. hide app-game div in mozila
+
+    appGame.classList.add('app-game--close');
 
     // 0. toggle light
     root.classList.add('light');
@@ -380,7 +386,6 @@ function loadGame({mode, player1, player2, height, width, number}){
 
         const initialRender = () => {
             // remove app-game--close 
-            const appGame = $('.app-game');
             if(appGame.className.includes('app-game--close')){
                 appGame.classList.remove('app-game--close');
             }
@@ -705,8 +710,6 @@ function loadGame({mode, player1, player2, height, width, number}){
 
         const resetInput = () => {
             // reset input form
-            const appGame = $('.app-game');
-
             appGame.classList.add('app-game--close');
             appStart.classList.remove('app-start--close');
 
