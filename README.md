@@ -1,5 +1,8 @@
 # XO game
 ---
+## [Playing here](https://h-pk-11.github.io/Tic-tac-toe/)
+
+---
 ## Rules
 * Rules of "**noughts and crosses**" game: 
     + Select dimensions of game board (max: 10 x 10),
