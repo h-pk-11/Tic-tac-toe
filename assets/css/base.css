@@ -1,0 +1,148 @@
+/* font-face */
+
+@font-face {
+    font-family: 'rubik';
+    font-weight: 400;
+    src: url('../fonts/rubik/Rubik-Regular.woff2') format('woff2'),
+         url('../fonts/rubik/Rubik-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'rubik';
+    font-weight: 300;
+    src: url('../fonts/rubik/Rubik-Light.woff2') format('woff2'),
+         url('../fonts/rubik/Rubik-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'rubik';
+    font-weight: 300;
+    font-style: italic;
+    src: url('../fonts/rubik/Rubik-Italic.woff2') format('woff2'),
+         url('../fonts/rubik/Rubik-Italic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'rubik';
+    font-weight: 500;
+    src: url('../fonts/rubik/Rubik-Medium.woff2') format('woff2'),
+         url('../fonts/rubik/Rubik-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'rubik';
+    font-weight: 700;
+    src: url('../fonts/rubik/Rubik-Bold.woff2') format('woff2'),
+         url('../fonts/rubik/Rubik-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'rubik';
+    font-weight: 900;
+    src: url('../fonts/rubik/Rubik-Black.woff') format('woff2'),
+         url('../fonts/rubik/Rubik-Black.woff.woff') format('woff');
+}
+
+/* ********* */
+
+:root.light {
+    --green-color: #5cb85c;
+    --green-hover-color: #449d44;
+    --green-border-color: #4cae4c;
+    --red-color: #dd4b39;
+    --red-hover-color: #c23321;
+    --yellow-color: #ffce3d;
+    --red-border-color: rgba(0,0,0,.2);
+    --blue-color: #5bc0de;
+    --blue-border-color: #46b8da;
+    --blue-background-color-1: #e4edf2;
+    --blue-background-color-2: #ade8f4;
+    --text-color: #333;
+    --text-main-heading-color: #606060;
+    --text-heading-color: #444;
+    --background-color: #f9f9f9;
+    --input-text-background-color: #fff;
+
+    --background-dialog-color: #fff;
+    --header-dialog-color: #f9f9f9;
+
+    --hover-color: #e6e6e6;
+    --hover-color-2: #bbb;
+    --close-button-color: #ccc;
+    --border-color: #ccc;
+    --border-color-2: #333;
+    --white-color: #fff;
+
+    --board-column-num: 3;
+    --board-row-num: 3;
+
+    --cell-dim: 150px;
+    --cell-background-color: #e4edf2;
+    --cell-active-background-color: #f9f9f9;
+    --cell-freeze-background-color: #ccc;
+    --cell-highlight-background-color: #ffce3d;
+    --icon-freeze-color: #606060;
+
+    --light-toggle-color: #ec9413;
+}
+
+:root.dark {
+    --green-color: #5cb85c;
+    --green-hover-color: #449d44;
+    --green-border-color: #4cae4c;
+    --red-color: #dd4b39;
+    --red-hover-color: #c23321;
+    --yellow-color: #ffce3d;
+    --red-border-color: rgba(193, 176, 176, 0.5);
+    --blue-color: #5bc0de;
+    --blue-border-color: #46b8da;
+    --blue-background-color-1: rgba(0, 203, 249, 0.15);
+    --blue-background-color-2: #ade8f4;
+    --text-color: #fff;
+    --text-main-heading-color: #f5fbf5;
+    --text-heading-color: #fff;
+    --background-color: #000;
+    --input-text-background-color: #d7d8d8;
+
+    --background-dialog-color: #000;
+    --header-dialog-color: #676767;
+
+    --hover-color: #e6e6e6;
+    --hover-color-2: #bbb;
+    --close-button-color: #bbb;
+    --border-color: #474747;
+    --border-color-2: #2d2d2d;
+    --white-color: #000;
+
+    --board-column-num: 3;
+    --board-row-num: 3;
+
+    --cell-dim: 150px;
+    --cell-background-color: #72a1ca;
+    --cell-active-background-color: rgba(239, 245, 243, 0.1);
+    --cell-freeze-background-color: rgba(204, 204, 204, 0.1);
+    --cell-highlight-background-color: rgba(255, 218, 110, 0.9);
+    --icon-freeze-color: rgba(96, 96, 96, 0.1);
+
+    --light-toggle-color: #386fc7;
+
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'rubik', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+}
