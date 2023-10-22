@@ -90,14 +90,12 @@ function start(){
 
     textInputs.forEach(textInput => {
         textInput.onblur = function(){
-            console.log('onblur');
             validate(textInput);
         };
     });
 
     textInputs.forEach(textInput => {
         textInput.oninput = function(){
-            console.log('oninput');
             clearError(textInput);
         };
     });
@@ -250,24 +248,20 @@ function appTransit(obj){
 
     appTransit.classList.add('app-transit--active');
     appTransitStep1.classList.add('app-transit__step--active');
-    console.log('3');
 
     setTimeout(
         () => {
             appTransitStep1.classList.remove('app-transit__step--active');
-            console.log('2');
             appTransitStep2.classList.add('app-transit__step--active');
 
             setTimeout(() => {
 
                 appTransitStep2.classList.remove('app-transit__step--active');
-                console.log('1');
                 appTransitStep3.classList.add('app-transit__step--active');
 
                 setTimeout(() => {
 
                     appTransitStep3.classList.remove('app-transit__step--active');
-                    console.log('0');
                     appTransitStep4.classList.add('app-transit__step--active');
 
                     setTimeout(() => {
@@ -276,8 +270,6 @@ function appTransit(obj){
 
                         // reset app-transit
                         appTransit.classList.remove('app-transit--active');
-
-                        console.log(obj);
 
                         loadGame(obj);
 
@@ -333,12 +325,7 @@ function loadGame({mode, player1, player2, height, width, number}){
             }
         };
 
-        const printBoard = () =>{
-            const valueBoard= board.map(row => row.map(cell => cell.getValue()));
-            console.log(valueBoard);
-        };
-
-        return { getRows, getColumns, getBoard, makeAMark, clearAllMarks, printBoard };
+        return { getRows, getColumns, getBoard, makeAMark, clearAllMarks };
     }
 
     // define cell
@@ -482,7 +469,6 @@ function loadGame({mode, player1, player2, height, width, number}){
                         const x = +cell.dataset.x;
 
                         board.makeAMark(y, x, actvPlayer);
-                        board.printBoard();
                         let result = checkWinner(y, x, actvPlayer);
 
                         if(result[0] !== -1){
@@ -605,7 +591,6 @@ function loadGame({mode, player1, player2, height, width, number}){
                 }
 
                 if(isGood) {
-                    console.log(`${player.playerName} X win!`)
                     return [1, i, 'X'];
                 }
             }
@@ -634,8 +619,6 @@ function loadGame({mode, player1, player2, height, width, number}){
                 }
 
                 if(isGood) {
-
-                    console.log(`${player.playerName} Y win!`)
                     return [1, i, 'Y'];
                 }
             }
@@ -672,7 +655,6 @@ function loadGame({mode, player1, player2, height, width, number}){
                 }
 
                 if(isGood) {
-                    console.log(`${player.playerName} D win!`)
                     return [1, i, 'D'];
                 }
 
@@ -708,14 +690,12 @@ function loadGame({mode, player1, player2, height, width, number}){
                 }
 
                 if(isGood) {
-                    console.log(`${player.playerName} rD win!`)
                     return [1, i, 'rD'];
                 }
 
             }
 
             if(moveCount == board.getRows()*board.getColumns()){
-                console.log('It\'s a draw!');
                 return [0, 0, ''];
             }
 
@@ -754,6 +734,5 @@ function loadGame({mode, player1, player2, height, width, number}){
     game.initialRender();
     game.addUiEvents();
 }
-
 
 start();
