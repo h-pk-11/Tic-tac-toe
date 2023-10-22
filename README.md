@@ -1,6 +1,6 @@
 # XO game
 ---
-## [Playing here](https://h-pk-11.github.io/Tic-tac-toe/)
+## [Playing here]( https://h-pk-11.github.io/XO-game/)
 
 ---
 ## Rules
