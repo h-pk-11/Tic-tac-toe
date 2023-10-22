@@ -547,7 +547,7 @@ select.form-input {
 
 .app-game.app-game--close {
     display: none;
-    z-index: -100;
+    z-index: -101;
 }
 
 .app-game_content {
