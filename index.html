@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.2-web/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;0,900;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="app">
+
+        <div class="app-light-toggle">
+            <button class="app-light-toggle__btn">
+                
+                <i class="fa-solid fa-sun"></i>
+                <span>Light</span>
+            </button>
+        </div>
+
+        <div class="app-start">
+
+            <div class="app-start__content">
+
+                <span class="app-start__heading">XO Game</span>
+
+                <button type="button" class="app-start__btn">
+                    <i class="fa-solid fa-play"></i>
+                    play
+                </button>
+
+            </div>
+
+            <div class="app-start-mode">
+
+                <div class="app-mode-content">
+
+                    <div class="app-mode__select">
+
+                        <div class="app-mode__select-header">
+
+                            <span>Select playing mode</span>
+                            <a href="#">
+                                <i class="fa-solid fa-rectangle-xmark"></i>
+                            </a>
+
+                        </div>
+
+                        <div class="app-mode__select-body">
+
+                            <div class="form-radio-container">
+
+                                <span class="form-radio-title">Select mode:</span>
+
+                                <div class="form-radio-select-mode">
+
+                                    <div>
+                                        <label for="playerVsPlayer">Player vs Player</label>
+                                        <input 
+                                        type="radio" 
+                                        id="playerVsPlayer" 
+                                        name="playerMode"
+                                        value="playerVsPlayer"
+                                        class="form-control"
+                                        checked
+                                        >
+                                    </div>
+
+                                    <div>
+                                        <label for="playerVsAi">Player vs AI</label>
+                                        <input 
+                                        type="radio" 
+                                        id="playerVsAi" 
+                                        name="playerMode"
+                                        value="playerVsAi"
+                                        class="form-control"
+                                        >
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-radio-select-mode-detail pVsPForm displayMode">
+
+                                <div class="app-mode__select-form">
+
+                                    <label for="player1name" class="form-label">Player 1:</label>
+                                    <input type="text" id="player1name" class="form-input" name="player1name" placeholder="Type name of player 1">
+                                    <span class="form-message"></span>
+
+                                </div>
+                
+                                <div class="app-mode__select-form">
+
+                                    <label for="player2name" class="form-label">Player 2:</label>
+                                    <input type="text" id="player2name" class="form-input" name="player2name" placeholder="Type name of player 2">
+                                    <span class="form-message"></span>
+
+                                </div>
+                               
+                            </div>
+    
+                            <div class="form-radio-select-mode-detail pVsAiForm">
+    
+                                <div class="app-mode__select-form">
+
+                                    <label for="player3name" class="form-label">Player 1:</label>
+                                    <input type="text" id="player3name" class="form-input" name="player3name" placeholder="Type name of player 1">
+                                    <span class="form-message"></span>
+                                </div>
+    
+                            </div>
+
+                            <span class="form-radio-select-mode-detail-grid__heading">
+                                Board dimensions
+                            </span>
+
+                            <div class="form-radio-select-mode-detail-grid gridForm">
+                                
+                                <div class="app-mode__select-form">
+
+                                    <label for="gridHeight" class="form-label">Height:</label>
+                                    <select name="gridHeight" id="gridHeight" class="form-input">
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+
+                                    <span>X</span>
+
+                                    <label for="gridWidth" class="form-label">Width:</label>
+                                    <select name="gridWidth" id="gridWidth" class="form-input">
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+
+                                </div>
+
+                                <div class="app-mode__select-form">
+
+                                    <label for="winNumber" class="form-label">Consecutive Xs/Os to win:</label>
+                                    <select name="winNumber" id="winNumber" class="form-input">
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+
+                                </div>
+    
+                            </div>
+
+
+
+                        </div>
+
+                       <div class="app-mode__select-footer">
+                            <button type="button" class="cancel">Cancel</button>
+                            <button type="button" class="ok">OK</button>
+                       </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+            
+       <div class="app-transit">
+
+            <ul class="app-transit__step">
+                <li class="app-transit__step-1">3</li>
+                <li class="app-transit__step-2">2</li>
+                <li class="app-transit__step-3">1</li>
+                <li class="app-transit__step-4">Start</li>
+            </ul>
+
+       </div>
+
+        <div class="app-game">
+            
+            <div class="app-game_content">
+
+                <div class="app-game_header">
+
+                    <span class="app-game_header__heading">Player 1's turn</span>
+
+                </div>
+                
+                <div class="app-game_gameboard">
+
+                    <div class="app-game_gameboard__board">
+
+                        <!-- <button class="app-game_gameboard__cell"></button>
+                        <button class="app-game_gameboard__cell"></button>
+                        <button class="app-game_gameboard__cell"></button>
+                        <button class="app-game_gameboard__cell"></button>
+                        <button class="app-game_gameboard__cell"></button>
+                        <button class="app-game_gameboard__cell"></button>
+                        <button class="app-game_gameboard__cell"></button>
+                        <button class="app-game_gameboard__cell"></button>
+                        <button class="app-game_gameboard__cell"></button> -->
+                        
+
+                    </div>
+
+                </div>
+                <div class="app-game_info">
+
+                </div>
+
+                <div class="app-game_footer">
+
+                    <a href="#" class="refresh">
+                        <i class="fa-solid fa-arrow-rotate-right"></i>
+                    </a>
+
+                    <a href="#" class="restart">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+           
+        </div>
+
+    </div>
+
+    <script src="./assets/javascript/script.js"></script>
+</body>
+</html>
