@@ -26,8 +26,7 @@ const root = document.documentElement;
 // app start
 function start(){
 
-    // -1. hide app-game div in mozila
-
+    // -1. hide app-game div
     appGame.classList.add('app-game--close');
 
     // 0. toggle light
@@ -194,7 +193,7 @@ function start(){
 
             }else{
                 gameInput = {
-                    mode: 'pvp',
+                    mode: 'pvAi',
                     player1: pVsAiForm.querySelector('#player3name').value,
                     player2: 'AI',
                     height,
@@ -357,7 +356,7 @@ function loadGame({mode, player1, player2, height, width, number}){
         };
     }
 
-
+    // define controller
     function GameController(
         rows,
         columns,
@@ -523,7 +522,6 @@ function loadGame({mode, player1, player2, height, width, number}){
                             }
 
                             // freeze all cells
-
                             cellElements.forEach(cell => {
                                 if(!cell.className.includes('cell--highlight')){
                                     cell.classList.add('cell--freeze');
